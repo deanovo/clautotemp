@@ -1,28 +1,36 @@
 'use client';
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import EmailLink from "./EmailLink";
 
-const fadeUp = {
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      duration: 0.4,
+      ease: EASE,
+    },
   },
 };
 
-const fadeLeft = {
+const fadeLeft: Variants = {
   hidden: { opacity: 0, x: 20 },
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      duration: 0.4,
+      ease: EASE,
+    },
   },
 };
 
-const group1 = {
+const group1: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -31,7 +39,7 @@ const group1 = {
   },
 };
 
-const group2 = {
+const group2: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -85,7 +93,11 @@ export default function AnimatedContent() {
               Get in touch..
             </motion.div>
 
-            <motion.a href="tel:07853617570" className="cl-mobile" variants={fadeUp}>
+            <motion.a
+              href="tel:07853617570"
+              className="cl-mobile"
+              variants={fadeUp}
+            >
               07853 617570
             </motion.a>
 
@@ -102,6 +114,7 @@ export default function AnimatedContent() {
             <motion.a
               href="https://www.facebook.com/profile.php?id=61577547781336"
               target="_blank"
+              rel="noopener noreferrer"
               className="cl-facebook"
               variants={fadeUp}
             >
