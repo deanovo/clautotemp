@@ -1,0 +1,182 @@
+body {
+margin: 0;
+position: relative;
+z-index: 1;
+background: #000;
+color: white;}
+
+@font-face {
+font-family: "Inter";
+src: url("/fonts/inter/Inter_24pt-SemiBold.ttf") format("truetype");
+font-weight: 600;
+font-style: normal;
+font-display: swap;}
+
+@font-face {
+font-family: "Inter";
+src: url("/fonts/inter/Inter_24pt-Black.ttf") format("truetype");
+font-weight: 900;
+font-style: normal;
+font-display: swap;}
+
+
+.bgbox {
+position: fixed;
+inset: 0;
+z-index: 0;
+pointer-events: none;
+width: 100%;
+height: auto;
+min-height: 100vh;
+overflow: auto;
+}
+
+.bg {
+background: #000 url(/bg.webp);
+width: 100%;
+height: auto;
+min-height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;}
+
+.bgfilter {
+content: "";
+position: absolute;
+inset: 0;
+background: url("/bg-filter.webp");
+background-size: 400px 400px;
+background-repeat: repeat;
+mix-blend-mode: overlay;
+opacity: 0.32;}
+
+.wrapper {
+width: 1500px;
+height: 100dvh;
+min-height: calc(var(--vh, 1vh) * 100);
+max-width: 100%;
+padding: 50px 30px;
+box-sizing: border-box;
+margin: 0 auto;
+position: relative;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+align-items: center;      
+justify-content: center;}
+
+
+
+.cl-logo {
+width: 360px;
+height: auto;
+margin: 0 auto;
+pointer-events: none;
+user-select: none;}
+
+.clauto-logo-image {
+width: 100%; height: auto;}
+
+.cl-ppp {
+color: white;
+width: 360px;
+max-width: 100%;
+margin: 2px auto 39px;
+font-family: "Inter";
+font-weight: 900;
+display: flex;
+flex-direction: row;
+gap: 23px;
+font-size: 17px;
+padding-left: 34px;
+box-sizing: border-box;
+pointer-events: none;
+user-select: none;}
+
+.cl-ppp span {
+color: #6be7fc}
+
+.cl-cs {
+width: 360px;
+max-width: 100%;
+font-family: "Inter";
+font-weight: 900;
+font-size: 22px;
+text-align: center;
+pointer-events: none;
+user-select: none;
+margin-bottom: 6px;}
+
+.cl-git {
+font-family: "Inter";
+font-weight: 600;
+font-size: 18px;
+text-align: center;
+pointer-events: none;
+user-select: none;
+margin-bottom: 13px;}
+
+.cl-email, .cl-mobile {
+color: #fff;
+text-decoration: none;
+text-align: center;
+width: 100%;
+display: block;
+margin: 0 auto 12px;
+font-family: "Inter";
+font-weight: 600;
+font-size: 16px;
+background: #ffffff;
+background: radial-gradient(circle,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%);
+border: 0.5px solid white;
+width: fit-content;
+height: 33px;
+line-height: 33px;
+padding: 0 13px;
+border-radius: 6px;
+text-shadow: 1px 1px 2px rgba(0,0,0, 0.4)}
+
+
+.cl-address {
+font-family: "Inter";
+font-weight: 600;
+font-size: 13px;
+text-align:center;
+margin-bottom: 13px;}
+
+.cl-facebook {
+font-family: "Inter";
+font-weight: 600;
+font-size: 13px;
+text-align:center;
+margin-bottom: 13px;
+display: block;
+width: 100%;
+color: white;
+text-decoration: none;}
+
+.divider {
+width: 250px; 
+height: 1px; 
+background: white;
+margin: 12px auto 13px;}
+
+
+@media (max-width: 1200px) {
+.bg {
+background: #000 url(/bg2.webp);
+width: 100%;
+height: auto;
+background-size: 100%;
+background-repeat: no-repeat;}
+}
+
+@media (max-width: 700px) {
+.wrapper {padding: 20px 30px;}
+.cl-logo {width: 260px;}
+.cl-ppp {
+width: 260px;
+gap: 8px;
+font-size: 13.4px;
+padding-left: 25px;
+margin: 2px auto 26px;}
+}
