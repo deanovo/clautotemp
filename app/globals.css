@@ -116,7 +116,7 @@ user-select: none;
 margin-bottom: 13px;}
 
 .cl-email, .cl-mobile {
-color: #030e18;
+color: #fff;
 text-decoration: none;
 text-align: center;
 width: 100%;
@@ -126,12 +126,14 @@ font-family: "Inter";
 font-weight: 600;
 font-size: 16px;
 background: #ffffff;
+background: radial-gradient(circle,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%);
 border: 0.5px solid white;
 width: fit-content;
 height: 33px;
 line-height: 33px;
 padding: 0 13px;
-border-radius: 12px;}
+border-radius: 6px;
+text-shadow: 1px 1px 2px rgba(0,0,0, 0.4)}
 
 
 .cl-address {
@@ -152,4 +154,8 @@ width: 100%;
 color: white;
 text-decoration: none;}
 
-
+.divider {
+width: 250px; 
+height: 1px; 
+background: white;
+margin: 12px auto 13px;}
